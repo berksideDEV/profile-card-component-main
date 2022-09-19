@@ -1,0 +1,182 @@
+/*Reset CSS*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*Custom CSS*/
+:root{
+    --d-cyan:hsl(185, 75%, 39%);
+    --v-dblue:hsl(229, 23%, 23%);
+    --d-grayishblue:hsl(227, 10%, 46%);
+    --d-gray:hsl(0, 0%, 59%);
+}
+body{
+    font-family: 'Fraunces', serif;
+    font-family: 'Orbitron', sans-serif;
+    font-size:18px;
+    background-image: 
+    url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg');
+    background-position: top -85rem left -50rem,
+                         bottom -85rem right -50rem;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color:var(--d-cyan);
+    height:100vh;
+}
+main{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    border-radius: 1rem;
+}
+.card{
+    width:400px;
+    height:min-content;
+    border-radius:1rem;
+}
+.card-image>img{
+    width:100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.card-info{
+    background-color:white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius:1rem;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding:1rem;
+}
+.card-footer>p>span{
+  font-size:12px;
+}
+.card-content>p>span{
+  font-size:18px;
+  position: relative;
+  left:10px;
+  font-weight: 700;
+}
+hr{
+  width:100%;
+}
+.bold{
+  font-weight: 700;
+  text-align: center;
+}
+.gray{
+  color:var(--d-gray);
+  font-weight: 300;
+}
+.card-content>img{
+  position: relative;
+  top:-50px;
+  border-radius: 50%;
+  border:5px solid white;
+}
+.card-content>p{
+    position: relative;
+    top:-30px;
+    margin-top: 10px;
+}
+@media screen and (max-width:568px){
+  body{
+    background-position: top -30rem left -30rem,
+                         bottom -30rem right -30rem;
+  }
+}
+@media screen and (max-width:1344px) {
+  body{
+    background-position: top -50rem left -40rem,
+                         bottom -50rem right -40rem;
+  }
+}
+@media screen and (max-width:852px) {
+  body{
+    background-position: top -30rem left -25rem,
+                         bottom -30rem right -25rem;
+  }
+}
